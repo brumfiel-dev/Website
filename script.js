@@ -74,7 +74,10 @@
     var storiesBody = document.getElementById('stories-body');
     var storiesChart = document.getElementById('stories-chart');
     var RSS_URL = 'https://feeds.npr.org/279612138/rss.xml';
-    var PROXY_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(RSS_URL);
+    var PROXY_URLS = [
+        'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(RSS_URL),
+        'https://api.allorigins.win/raw?url=' + encodeURIComponent(RSS_URL)
+    ];
 
     function formatStoryDate(dateStr) {
         var d = new Date(dateStr);
@@ -184,53 +187,66 @@
         return svg;
     }
 
-    fetch(PROXY_URL)
-        .then(function (res) { return res.text(); })
-        .then(function (xmlText) {
-            var parser = new DOMParser();
-            var xml = parser.parseFromString(xmlText, 'text/xml');
-            var items = xml.querySelectorAll('item');
-            var rows = [];
+    function handleRssData(xmlText) {
+        var parser = new DOMParser();
+        var xml = parser.parseFromString(xmlText, 'text/xml');
+        var items = xml.querySelectorAll('item');
+        var rows = [];
 
-            items.forEach(function (item) {
-                var creator = item.getElementsByTagNameNS('http://purl.org/dc/elements/1.1/', 'creator');
-                if (!creator.length) return;
-                var name = creator[0].textContent.trim();
-                if (name !== 'Geoff Brumfiel') return;
+        items.forEach(function (item) {
+            var creator = item.getElementsByTagNameNS('http://purl.org/dc/elements/1.1/', 'creator');
+            if (!creator.length) return;
+            var name = creator[0].textContent.trim();
+            if (name !== 'Geoff Brumfiel') return;
 
-                var title = item.querySelector('title') ? item.querySelector('title').textContent : '';
-                var link = item.querySelector('link') ? item.querySelector('link').textContent : '';
-                var pubDate = item.querySelector('pubDate') ? item.querySelector('pubDate').textContent : '';
+            var title = item.querySelector('title') ? item.querySelector('title').textContent : '';
+            var link = item.querySelector('link') ? item.querySelector('link').textContent : '';
+            var pubDate = item.querySelector('pubDate') ? item.querySelector('pubDate').textContent : '';
 
-                rows.push({
-                    date: pubDate,
-                    title: title,
-                    link: link
-                });
+            rows.push({
+                date: pubDate,
+                title: title,
+                link: link
             });
-
-            if (rows.length === 0) return; // keep static fallback
-
-            // Limit to 15 most recent
-            rows = rows.slice(0, 15);
-
-            // Update table
-            var html = '';
-            rows.forEach(function (row) {
-                html += '<tr>' +
-                    '<td>' + escapeHtml(formatStoryDate(row.date)) + '</td>' +
-                    '<td><a href="' + escapeHtml(row.link) + '" target="_blank" rel="noopener">' + escapeHtml(row.title) + '</a></td>' +
-                    '</tr>';
-            });
-            storiesBody.innerHTML = html;
-
-            // Update chart
-            storiesChart.innerHTML = buildChartSvg(rows) +
-                '<p class="figure-caption">Fig. 2.1 &mdash; Distribution of recent stories by subject category.</p>';
-        })
-        .catch(function () {
-            // On error, keep the static fallback table and chart
         });
+
+        if (rows.length === 0) return;
+
+        // Limit to 15 most recent
+        rows = rows.slice(0, 15);
+
+        // Update table
+        var html = '';
+        rows.forEach(function (row) {
+            html += '<tr>' +
+                '<td>' + escapeHtml(formatStoryDate(row.date)) + '</td>' +
+                '<td><a href="' + escapeHtml(row.link) + '" target="_blank" rel="noopener">' + escapeHtml(row.title) + '</a></td>' +
+                '</tr>';
+        });
+        storiesBody.innerHTML = html;
+
+        // Update chart
+        storiesChart.innerHTML = buildChartSvg(rows) +
+            '<p class="figure-caption">Fig. 1.1 &mdash; Distribution of recent stories by subject category.</p>';
+    }
+
+    function fetchRss(proxyIndex) {
+        if (proxyIndex >= PROXY_URLS.length) return; // all proxies failed, keep fallback
+        fetch(PROXY_URLS[proxyIndex])
+            .then(function (res) {
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                return res.text();
+            })
+            .then(function (xmlText) {
+                if (xmlText.indexOf('<item>') === -1) throw new Error('Invalid RSS');
+                handleRssData(xmlText);
+            })
+            .catch(function () {
+                fetchRss(proxyIndex + 1); // try next proxy
+            });
+    }
+
+    fetchRss(0);
 
     // --- Bluesky feed ---
     var BSKY_HANDLE = 'gbrumfiel.bsky.social';
