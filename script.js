@@ -17,16 +17,20 @@
     });
 
     // --- Active nav link on scroll ---
-    var sections = document.querySelectorAll('[id]');
     var navAnchors = document.querySelectorAll('.nav-links a');
+    var sectionIds = [];
+    navAnchors.forEach(function (a) {
+        sectionIds.push(a.getAttribute('href').substring(1));
+    });
 
     function updateActiveNav() {
         var scrollY = window.scrollY + 80;
         var current = '';
 
-        sections.forEach(function (section) {
-            if (section.offsetTop <= scrollY) {
-                current = section.getAttribute('id');
+        sectionIds.forEach(function (id) {
+            var section = document.getElementById(id);
+            if (section && section.offsetTop <= scrollY) {
+                current = id;
             }
         });
 

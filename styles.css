@@ -190,14 +190,14 @@ a:hover {
 /* Dark angled banner with reversed text */
 .cover-banner {
     position: absolute;
-    left: -30px;
+    left: 0;
     top: 120px;
     background: var(--accent-red);
     color: var(--white);
     font-family: var(--font-cover-sans);
     font-size: 14px;
     letter-spacing: 0.2em;
-    padding: 10px 50px 10px 60px;
+    padding: 10px 50px 10px 24px;
     transform: rotate(-4deg);
     transform-origin: left center;
     z-index: 2;
@@ -842,10 +842,10 @@ td a {
     }
 
     .cover-banner {
-        left: -20px;
+        left: 0;
         top: 80px;
         font-size: 11px;
-        padding: 8px 36px 8px 44px;
+        padding: 8px 36px 8px 16px;
     }
 
     .cover-upper-right {
