@@ -194,11 +194,6 @@
         var rows = [];
 
         items.forEach(function (item) {
-            var creator = item.getElementsByTagNameNS('http://purl.org/dc/elements/1.1/', 'creator');
-            if (!creator.length) return;
-            var name = creator[0].textContent.trim();
-            if (name !== 'Geoff Brumfiel') return;
-
             var title = item.querySelector('title') ? item.querySelector('title').textContent : '';
             var link = item.querySelector('link') ? item.querySelector('link').textContent : '';
             var pubDate = item.querySelector('pubDate') ? item.querySelector('pubDate').textContent : '';
