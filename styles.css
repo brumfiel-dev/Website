@@ -1,31 +1,33 @@
 /* =============================================
    GB-2026-001 STYLESHEET
-   Modeled after AEC/DTIC technical reports, ca. 1957
+   Personal site for Geoff Brumfiel, styled after
+   AEC/DTIC technical reports, ca. 1957.
    ============================================= */
 
+/* --- RESET --- */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* --- DESIGN TOKENS --- */
 :root {
     --black: #1a1a1a;
     --white: #ffffff;
-    --off-white: #fafaf7;
     --gray: #666;
     --light-gray: #ccc;
-    --link: #8C2E00;
-    --accent-red: #8C2E00;
-    --accent-blue: #005D8C;
+    --accent-red: #8C2E00;     /* links, banner */
+    --accent-blue: #005D8C;    /* tables, figures, chart elements */
     --font-body: 'Courier Prime', 'Courier New', Courier, monospace;
     --font-cover-sans: Helvetica, Arial, sans-serif;
     --font-cover-serif: 'Times New Roman', Times, Georgia, serif;
 }
 
+/* --- BASE --- */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 52px;
+    scroll-padding-top: 52px;  /* offset for fixed nav bar */
 }
 
 body {
@@ -45,7 +47,8 @@ a:hover {
     text-decoration: none;
 }
 
-/* --- NAVIGATION BAR --- */
+/* --- NAVIGATION BAR ---
+   Fixed black bar at the top with doc ID + section links */
 .nav-bar {
     position: fixed;
     top: 0;
@@ -76,6 +79,7 @@ a:hover {
     flex-shrink: 0;
 }
 
+/* Hamburger button — hidden on desktop, shown on mobile */
 .nav-toggle {
     display: none;
     background: none;
@@ -102,12 +106,14 @@ a:hover {
     white-space: nowrap;
 }
 
+/* Hover state and scroll-activated "active" state */
 .nav-links li a:hover,
 .nav-links li a.active {
     color: var(--white);
 }
 
-/* --- COVER PAGE --- */
+/* --- COVER PAGE ---
+   Full-viewport hero section with report styling */
 .cover-page {
     min-height: 100vh;
     max-width: 1100px;
@@ -117,7 +123,7 @@ a:hover {
     overflow: hidden;
 }
 
-/* Decorative image on cover */
+/* Faint decorative image behind cover content */
 .cover-deco {
     position: absolute;
     pointer-events: none;
@@ -131,63 +137,7 @@ a:hover {
     opacity: 0.14;
 }
 
-/* Plumbob photo in qualifications section */
-.qualifications-page {
-    position: relative;
-}
-
-.qualifications-detail {
-    display: flex;
-    gap: 32px;
-    align-items: flex-start;
-}
-
-.qualifications-detail .body-text {
-    flex: 1;
-    min-width: 0;
-}
-
-.qualifications-figure {
-    flex-shrink: 0;
-    width: 240px;
-    transform: rotate(2deg);
-}
-
-.qualifications-photo {
-    width: 100%;
-    display: block;
-    box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Abstract layout - side by side, no wrap */
-.abstract-layout {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-}
-
-.abstract-layout .body-text {
-    flex: 1;
-    min-width: 0;
-}
-
-.abstract-layout .section-figure-float {
-    float: none;
-    flex-shrink: 0;
-}
-
-/* Floated figures alongside text */
-.section-figure-float {
-    float: right;
-    width: 220px;
-    margin: 0 0 16px 24px;
-}
-
-.section-figure-float.section-figure-lg {
-    width: 380px;
-}
-
-/* Dark angled banner with reversed text */
+/* Dark angled banner with reversed text ("PRELIMINARY REPORT") */
 .cover-banner {
     position: absolute;
     left: 0;
@@ -203,7 +153,7 @@ a:hover {
     z-index: 2;
 }
 
-/* Top-right report info */
+/* Top-right report ID and category label */
 .cover-upper-right {
     position: absolute;
     top: 80px;
@@ -225,6 +175,7 @@ a:hover {
     margin-top: 4px;
 }
 
+/* Main content area on the cover (left side) */
 .cover-body {
     padding-left: 8%;
     padding-right: 40%;
@@ -233,7 +184,7 @@ a:hover {
     z-index: 1;
 }
 
-/* Italic bold label above name (mirrors "OPERATION" in original) */
+/* Italic label above name (like "OPERATION" in original Plumbob cover) */
 .cover-operation {
     font-family: var(--font-cover-sans);
     font-size: 20px;
@@ -243,6 +194,7 @@ a:hover {
     margin-bottom: 6px;
 }
 
+/* Large name in Bree Serif — the main title of the "report" */
 .cover-name {
     font-family: 'Bree Serif', serif;
     font-size: clamp(52px, 9vw, 78px);
@@ -255,56 +207,7 @@ a:hover {
     display: inline-block;
 }
 
-.cover-location {
-    margin-bottom: 60px;
-}
-
-.cover-location p {
-    font-family: var(--font-cover-sans);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    line-height: 1.7;
-}
-
-.cover-project {
-    margin-bottom: 80px;
-}
-
-.cover-project p {
-    font-family: var(--font-cover-sans);
-    font-size: 18px;
-}
-
-.cover-project-title {
-    font-family: var(--font-cover-sans) !important;
-    font-size: 16px !important;
-    margin-top: 20px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-}
-
-.cover-issuance {
-    margin-bottom: 60px;
-}
-
-.cover-issuance p {
-    font-family: var(--font-cover-serif);
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.cover-group {
-    margin-bottom: 0;
-}
-
-.cover-group p {
-    font-family: var(--font-cover-sans);
-    font-size: 16px;
-    letter-spacing: 0.08em;
-}
-
-/* Photo on right side, larger */
+/* Photo on right side of cover */
 .cover-photo-area {
     position: absolute;
     right: 48px;
@@ -329,6 +232,7 @@ a:hover {
     display: inline-block;
 }
 
+/* "Approved for Public Release" box at bottom-right of cover */
 .cover-dist {
     position: absolute;
     bottom: 48px;
@@ -348,7 +252,8 @@ a:hover {
     font-weight: 700 !important;
 }
 
-/* --- PAGE SECTIONS --- */
+/* --- PAGE SECTIONS ---
+   Each major section (Summary, Contents, chapters) uses this wrapper */
 .page {
     width: 100%;
     padding: 60px 48px;
@@ -358,79 +263,6 @@ a:hover {
 .page-inner {
     max-width: 760px;
     margin: 0 auto;
-}
-
-/* --- NOTICE --- */
-.notice-heading {
-    font-family: var(--font-cover-serif);
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 28px;
-}
-
-/* --- TITLE PAGE --- */
-.tp-operation {
-    font-family: var(--font-cover-serif);
-    font-size: 15px;
-    margin-bottom: 16px;
-}
-
-.tp-project {
-    font-family: var(--font-cover-serif);
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-.tp-title {
-    font-family: var(--font-body);
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.5;
-    margin-bottom: 32px;
-}
-
-.tp-by {
-    font-family: var(--font-body);
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.tp-author {
-    font-family: var(--font-body);
-    font-weight: 700;
-    margin-bottom: 48px;
-}
-
-.tp-approval-row {
-    display: flex;
-    gap: 80px;
-    margin-bottom: 60px;
-}
-
-.tp-approval p {
-    font-family: var(--font-body);
-    font-weight: 700;
-    font-size: 13px;
-}
-
-.tp-approval-title {
-    padding-left: 24px;
-}
-
-.tp-org {
-    margin-bottom: 40px;
-}
-
-.tp-org p {
-    font-family: var(--font-body);
-    font-weight: 700;
-    font-size: 13px;
-}
-
-.tp-date {
-    font-family: var(--font-body);
-    font-weight: 700;
-    font-size: 13px;
 }
 
 /* --- SECTION / CHAPTER HEADINGS --- */
@@ -468,30 +300,76 @@ a:hover {
     margin-bottom: 14px;
 }
 
-.body-text.indented p {
-    text-indent: 40px;
-}
-
 .body-text em {
     font-style: italic;
 }
 
-/* --- CONTENTS --- */
+/* --- EXECUTIVE SUMMARY LAYOUT ---
+   Side-by-side text + figure for the abstract/summary section */
+.abstract-layout {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.abstract-layout .body-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.abstract-layout .section-figure-float {
+    float: none;
+    flex-shrink: 0;
+}
+
+/* --- FLOATED FIGURES ---
+   Images that float to the right of body text */
+.section-figure-float {
+    float: right;
+    width: 220px;
+    margin: 0 0 16px 24px;
+}
+
+.section-figure-float.section-figure-lg {
+    width: 380px;
+}
+
+/* --- QUALIFICATIONS SECTION ---
+   Side-by-side text + Plumbob photo */
+.qualifications-page {
+    position: relative;
+}
+
+.qualifications-detail {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.qualifications-detail .body-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.qualifications-figure {
+    flex-shrink: 0;
+    width: 240px;
+    transform: rotate(2deg);
+}
+
+.qualifications-photo {
+    width: 100%;
+    display: block;
+    box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* --- CONTENTS (Table of Contents) --- */
 .contents-heading {
     font-family: var(--font-body);
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 24px;
-}
-
-.contents-sub-heading {
-    font-family: var(--font-body);
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-top: 32px;
-    margin-bottom: 16px;
 }
 
 .contents-list {
@@ -531,6 +409,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Dotted leader line between entry title and page number */
 .contents-dots {
     flex: 1;
     border-bottom: 1px dotted var(--gray);
@@ -584,10 +463,10 @@ td a {
     color: var(--accent-red);
 }
 
+/* Keep dates from wrapping in the stories table */
 .dispatch-table td:first-child {
     white-space: nowrap;
 }
-
 
 /* --- ARCHIVE NOTE --- */
 .archive-note {
@@ -599,7 +478,6 @@ td a {
     margin: 48px 0;
     text-align: center;
 }
-
 
 .figure-photo-wrapper {
     position: relative;
@@ -613,6 +491,7 @@ td a {
     filter: grayscale(100%) contrast(1.2) brightness(1.05);
 }
 
+/* Canvas overlay that sits on top of the photo for film grain */
 .grain-overlay {
     position: absolute;
     top: 0;
@@ -632,13 +511,14 @@ td a {
     color: var(--accent-blue);
 }
 
-/* --- SVG SCHEMATIC --- */
+/* --- SVG SCHEMATIC (employment diagram + bar chart) --- */
 .schematic-svg {
     max-width: 100%;
     height: auto;
 }
 
-/* --- DISPATCHES + BLUESKY SIDEBAR LAYOUT --- */
+/* --- STORIES + BLUESKY SIDEBAR LAYOUT ---
+   Two-column layout: stories on the left, Bluesky feed on the right */
 .dispatches-page .dispatches-layout {
     max-width: 1100px;
     margin: 0 auto;
@@ -652,6 +532,7 @@ td a {
     min-width: 0;
 }
 
+/* Sticky sidebar that scrolls with you */
 .bsky-sidebar {
     width: 300px;
     flex-shrink: 0;
@@ -694,9 +575,7 @@ td a {
     text-decoration: underline;
 }
 
-/* --- BLUESKY FEED --- */
-.bsky-feed {}
-
+/* --- BLUESKY POST CARDS --- */
 .bsky-loading {
     padding: 8px 0;
     color: var(--gray);
@@ -733,6 +612,7 @@ td a {
     color: var(--gray);
 }
 
+/* Link preview card inside a Bluesky post */
 .bsky-embed-card {
     display: block;
     border-left: 2px solid #ccc;
@@ -778,12 +658,14 @@ td a {
     text-align: center;
 }
 
-/* --- RESPONSIVE --- */
+/* --- RESPONSIVE (tablet / phone) --- */
 @media (max-width: 768px) {
+    /* Show hamburger menu button */
     .nav-toggle {
         display: block;
     }
 
+    /* Stack nav links vertically in a dropdown */
     .nav-links {
         display: none;
         position: absolute;
@@ -804,6 +686,7 @@ td a {
         border-bottom: 1px solid #222;
     }
 
+    /* Hide decorative diagram on small screens */
     .cover-deco-diagram {
         display: none;
     }
@@ -817,6 +700,7 @@ td a {
         flex-direction: column;
     }
 
+    /* Stack floated figures below text on mobile */
     .section-figure-float {
         float: none;
         order: 99;
@@ -863,14 +747,6 @@ td a {
         font-size: 48px;
     }
 
-    .cover-project {
-        margin-bottom: 40px;
-    }
-
-    .cover-plumb {
-        margin-bottom: 32px;
-    }
-
     .cover-photo-area {
         position: relative;
         right: auto;
@@ -883,6 +759,7 @@ td a {
         max-width: 240px;
     }
 
+    /* Stack stories + Bluesky sidebar vertically */
     .dispatches-page .dispatches-layout {
         flex-direction: column;
         gap: 32px;
@@ -915,11 +792,6 @@ td a {
         padding: 40px 20px 48px;
     }
 
-    .tp-approval-row {
-        flex-direction: column;
-        gap: 24px;
-    }
-
     .nav-inner {
         padding: 0 16px;
     }
@@ -947,7 +819,8 @@ td a {
     }
 }
 
-/* --- PRINT --- */
+/* --- PRINT ---
+   Hide nav bar and reduce spacing when printing */
 @media print {
     .nav-bar {
         display: none;
@@ -966,6 +839,7 @@ td a {
     }
 }
 
+/* Subtle text selection highlight */
 ::selection {
     background: rgba(0, 0, 0, 0.12);
 }
