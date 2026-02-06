@@ -19,8 +19,8 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#abstract">Summary</a></li>
                 <li><a href="#contents">Contents</a></li>
-                <li><a href="#service-record">Employment</a></li>
                 <li><a href="#Stories">Stories</a></li>
+                <li><a href="#service-record">Employment</a></li>
                 <li><a href="#qualifications">Qualifications</a></li>
                 <li><a href="#distribution">Contact</a></li>
             </ul>
@@ -90,26 +90,26 @@
 
             <div class="contents-list">
                 <div class="contents-chapter">
-                    <a href="#service-record">Chapter 1&ensp;Employment</a>
+                    <a href="#Stories">Chapter 1&ensp;Recent Stories</a>
                 </div>
                 <div class="contents-entry sub">
-                    <span>1.1&emsp;Summary of Employment</span>
+                    <span>1.1&emsp;Table of Recent Stories</span>
                     <span class="contents-dots"></span>
-                    <a href="#service-record">1</a>
-                </div>
-                <div class="contents-entry sub">
-                    <span>1.2&emsp;Detailed Service Notes</span>
-                    <span class="contents-dots"></span>
-                    <a href="#service-record">2</a>
+                    <a href="#Stories">1</a>
                 </div>
 
                 <div class="contents-chapter">
-                    <a href="#Stories">Chapter 2&ensp;Recent Stories</a>
+                    <a href="#service-record">Chapter 2&ensp;Employment</a>
                 </div>
                 <div class="contents-entry sub">
-                    <span>2.1&emsp;Table of Recent Stories</span>
+                    <span>2.1&emsp;Summary of Employment</span>
                     <span class="contents-dots"></span>
-                    <a href="#Stories">3</a>
+                    <a href="#service-record">2</a>
+                </div>
+                <div class="contents-entry sub">
+                    <span>2.2&emsp;Detailed Service Notes</span>
+                    <span class="contents-dots"></span>
+                    <a href="#service-record">2</a>
                 </div>
 
                 <div class="contents-chapter">
@@ -128,187 +128,11 @@
         </div>
     </section>
 
-    <!-- CHAPTER 1: Employment -->
-    <section id="service-record" class="page">
-        <div class="page-inner">
-            <p class="chapter-label">Chapter 1</p>
-            <h2 class="chapter-heading">Employment</h2>
-
-            <!-- Technical schematic inspired by PLUMBBOB Fig. 2.4 grid diagrams -->
-            <div class="figure">
-                <svg class="schematic-svg" viewBox="0 0 640 340" xmlns="http://www.w3.org/2000/svg">
-                    <style>
-                        .sch-line { stroke: #005D8C; fill: none; }
-                        .sch-thin { stroke-width: 0.75; }
-                        .sch-med { stroke-width: 1.25; }
-                        .sch-thick { stroke-width: 2; }
-                        .sch-dash { stroke-dasharray: 6,4; }
-                        .sch-text { font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; fill: #005D8C; }
-                        .sch-text-sm { font-family: 'Courier Prime', 'Courier New', monospace; font-size: 7px; fill: #005D8C; }
-                        .sch-text-label { font-family: Helvetica, Arial, sans-serif; font-size: 8px; fill: #005D8C; font-weight: 700; }
-                        .sch-arrow { stroke: #005D8C; stroke-width: 1; fill: #005D8C; }
-                    </style>
-
-                    <!-- Grid area -->
-                    <rect x="120" y="40" width="400" height="240" class="sch-line sch-med" />
-
-                    <!-- Grid lines - vertical -->
-                    <line x1="200" y1="40" x2="200" y2="280" class="sch-line sch-thin" />
-                    <line x1="280" y1="40" x2="280" y2="280" class="sch-line sch-thin" />
-                    <line x1="360" y1="40" x2="360" y2="280" class="sch-line sch-thin" />
-                    <line x1="440" y1="40" x2="440" y2="280" class="sch-line sch-thin" />
-
-                    <!-- Grid lines - horizontal -->
-                    <line x1="120" y1="100" x2="520" y2="100" class="sch-line sch-thin" />
-                    <line x1="120" y1="160" x2="520" y2="160" class="sch-line sch-thin" />
-                    <line x1="120" y1="220" x2="520" y2="220" class="sch-line sch-thin" />
-
-                    <!-- Grid cell labels (station assignments, styled as numbered squares) -->
-                    <text x="155" y="78" class="sch-text" text-anchor="middle">APS</text>
-                    <text x="155" y="88" class="sch-text-sm" text-anchor="middle">2001</text>
-
-                    <text x="240" y="78" class="sch-text" text-anchor="middle">NATURE</text>
-                    <text x="240" y="88" class="sch-text-sm" text-anchor="middle">DC 02-07</text>
-
-                    <text x="320" y="78" class="sch-text" text-anchor="middle">NATURE</text>
-                    <text x="320" y="88" class="sch-text-sm" text-anchor="middle">LON 07-13</text>
-
-                    <text x="400" y="78" class="sch-text" text-anchor="middle">NPR</text>
-                    <text x="400" y="88" class="sch-text-sm" text-anchor="middle">CORR 13-16</text>
-
-                    <text x="480" y="78" class="sch-text" text-anchor="middle">NPR</text>
-                    <text x="480" y="88" class="sch-text-sm" text-anchor="middle">SR ED 19-</text>
-
-                    <!-- Subject position markers (circles) -->
-                    <circle cx="155" cy="130" r="4" fill="#005D8C" />
-                    <circle cx="240" cy="130" r="4" fill="#005D8C" />
-                    <circle cx="320" cy="190" r="4" fill="#005D8C" />
-                    <circle cx="400" cy="130" r="4" fill="#005D8C" />
-                    <circle cx="480" cy="130" r="4" fill="#005D8C" />
-
-                    <!-- Path line connecting assignments -->
-                    <polyline points="155,130 240,130 320,190 400,130 480,130" class="sch-line sch-med sch-dash" />
-
-                    <!-- Row labels -->
-                    <text x="115" y="134" class="sch-text-label" text-anchor="end">DC</text>
-                    <text x="115" y="194" class="sch-text-label" text-anchor="end">LON</text>
-                    <text x="115" y="254" class="sch-text-label" text-anchor="end">OTHER</text>
-
-                    <!-- Dimension line - top -->
-                    <line x1="120" y1="25" x2="520" y2="25" class="sch-line sch-thin" />
-                    <line x1="120" y1="20" x2="120" y2="30" class="sch-line sch-thin" />
-                    <line x1="520" y1="20" x2="520" y2="30" class="sch-line sch-thin" />
-                    <text x="320" y="22" class="sch-text-label" text-anchor="middle">24 YEARS CONTINUOUS SERVICE</text>
-
-                    <!-- Dimension line - right -->
-                    <line x1="535" y1="40" x2="535" y2="280" class="sch-line sch-thin" />
-                    <line x1="530" y1="40" x2="540" y2="40" class="sch-line sch-thin" />
-                    <line x1="530" y1="280" x2="540" y2="280" class="sch-line sch-thin" />
-
-                    <!-- Marking post indicators -->
-                    <line x1="155" y1="275" x2="155" y2="295" class="sch-line sch-thin" />
-                    <line x1="480" y1="275" x2="480" y2="295" class="sch-line sch-thin" />
-                    <text x="155" y="305" class="sch-text-sm" text-anchor="middle">2001</text>
-                    <text x="480" y="305" class="sch-text-sm" text-anchor="middle">PRESENT</text>
-
-                    <!-- Section/cross-section callout -->
-                    <circle cx="40" cy="160" r="16" class="sch-line sch-med" />
-                    <text x="40" y="157" class="sch-text-label" text-anchor="middle">A</text>
-                    <line x1="40" y1="148" x2="40" y2="172" class="sch-line sch-thin" />
-
-                    <!-- GZ label (like ground zero in the original) -->
-                    <text x="80" y="48" class="sch-text-label">SUBJ.</text>
-
-                    <!-- Arrow from GZ to grid -->
-                    <line x1="94" y1="44" x2="116" y2="44" class="sch-line sch-thin" />
-                    <polygon points="116,41 122,44 116,47" class="sch-arrow" />
-
-                    <!-- Figure label area -->
-                    <text x="38" y="330" class="sch-text-sm">Fig. 1.2</text>
-                </svg>
-                <p class="figure-caption">Fig. 1.2 &mdash; General arrangement of professional assignments showing<br>the positions and stations of the subject (2001 &ndash; Present).</p>
-            </div>
-
-            <h3 class="sub-heading">1.1 SUMMARY OF EMPLOYMENT</h3>
-
-            <p class="table-caption">Table 1.1 &mdash; Summary of Professional Assignments</p>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Period</th>
-                            <th>Organization</th>
-                            <th>Designation</th>
-                            <th>Station</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Oct 2019 &ndash; Present</td>
-                            <td>NPR</td>
-                            <td>Senior Editor &amp; Correspondent</td>
-                            <td>Washington, D.C.</td>
-                        </tr>
-                        <tr>
-                            <td>Mar 2016 &ndash; Oct 2019</td>
-                            <td>NPR</td>
-                            <td>Dep. Sr. Supervising Editor, Science</td>
-                            <td>Washington, D.C.</td>
-                        </tr>
-                        <tr>
-                            <td>Mar 2013 &ndash; Mar 2016</td>
-                            <td>NPR</td>
-                            <td>Science Correspondent</td>
-                            <td>Washington, D.C.</td>
-                        </tr>
-                        <tr>
-                            <td>Aug 2007 &ndash; Mar 2013</td>
-                            <td>Nature Magazine</td>
-                            <td>Senior Reporter</td>
-                            <td>London, UK</td>
-                        </tr>
-                        <tr>
-                            <td>Jan 2002 &ndash; Aug 2007</td>
-                            <td>Nature Magazine</td>
-                            <td>Washington Correspondent</td>
-                            <td>Washington, D.C.</td>
-                        </tr>
-                        <tr>
-                            <td>Aug 2001 &ndash; Dec 2001</td>
-                            <td>APS / Phys. Rev. Focus</td>
-                            <td>Reporter &amp; Asst. to the Editor</td>
-                            <td>College Park, MD</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 class="sub-heading">1.2 DETAILED EMPLOYMENT NOTES</h3>
-
-            <div class="body-text has-figure">
-                <p><strong>NPR &mdash; Senior Editor &amp; Correspondent (Oct 2019 &ndash; Present).</strong> Covers nuclear weapons policy, space and national security, and AI-driven disinformation for broadcast and digital platforms. Produces enterprise investigations, breaking news reports, and explanatory features reaching NPR's weekly audience. Develops and edits science coverage across the NPR newsroom.</p>
-
-                <p><strong>NPR &mdash; Deputy Sr. Supervising Editor, Science (Mar 2016 &ndash; Oct 2019).</strong> Directed daily science and health coverage across all NPR platforms, supervising a team of correspondents, editors, and producers. Managed coverage of major science stories including climate, public health, and technology policy.</p>
-
-                <img src="Diagram 1.png" alt="Grid detail schematic" class="section-figure-float section-figure-lg">
-
-                <p><strong>NPR &mdash; Science Correspondent (Mar 2013 &ndash; Mar 2016).</strong> On-air correspondent covering science, technology, and national security for NPR newscasts and programs. Reported from the field on events including space launches, nuclear policy developments, and emerging technology.</p>
-
-                <p><strong>Nature Magazine &mdash; Senior Reporter (Aug 2007 &ndash; Mar 2013).</strong> Covered physical sciences, defense research, and science policy from Nature's London bureau for the world's leading multidisciplinary science journal. Reported on major developments including the Higgs boson discovery, Fukushima nuclear disaster, and European science policy.</p>
-
-                <p><strong>Nature Magazine &mdash; Washington Correspondent (Jan 2002 &ndash; Aug 2007).</strong> Covered U.S. science policy, federal research funding, and physics for Nature from Washington, D.C. Reported on the post-9/11 science security landscape, NASA programs, and Department of Energy research priorities.</p>
-
-                <p><strong>APS / Physical Review Focus &mdash; Reporter &amp; Asst. to the Editor (Aug 2001 &ndash; Dec 2001).</strong> Wrote accessible summaries of physics research published in Physical Review journals for a general scientific audience.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CHAPTER 2: RECENT STORIES -->
+    <!-- CHAPTER 1: RECENT STORIES -->
     <section id="Stories" class="page dispatches-page">
         <div class="dispatches-layout">
             <div class="dispatches-main">
-            <p class="chapter-label">Chapter 2</p>
+            <p class="chapter-label">Chapter 1</p>
             <h2 class="chapter-heading">RECENT STORIES</h2>
 
             <div id="stories-chart" class="figure">
@@ -367,7 +191,7 @@
                 <p class="figure-caption">Fig. 2.1 &mdash; Distribution of recent stories by subject category.</p>
             </div>
 
-            <p class="table-caption">Table 2.1 &mdash; Table of Recent Stories</p>
+            <p class="table-caption">Table 1.1 &mdash; Table of Recent Stories</p>
             <div class="table-wrapper">
                 <table class="dispatch-table">
                     <thead>
@@ -449,6 +273,179 @@
                 </div>
             </aside>
         </div><!-- end .dispatches-layout -->
+    </section>
+
+    <!-- CHAPTER 2: Employment -->
+    <section id="service-record" class="page">
+        <div class="page-inner">
+            <p class="chapter-label">Chapter 2</p>
+            <h2 class="chapter-heading">Employment</h2>
+
+            <!-- Technical schematic inspired by PLUMBBOB Fig. 2.4 grid diagrams -->
+            <div class="figure">
+                <svg class="schematic-svg" viewBox="0 0 640 340" xmlns="http://www.w3.org/2000/svg">
+                    <style>
+                        .sch-line { stroke: #005D8C; fill: none; }
+                        .sch-thin { stroke-width: 0.75; }
+                        .sch-med { stroke-width: 1.25; }
+                        .sch-thick { stroke-width: 2; }
+                        .sch-dash { stroke-dasharray: 6,4; }
+                        .sch-text { font-family: 'Courier Prime', 'Courier New', monospace; font-size: 9px; fill: #005D8C; }
+                        .sch-text-sm { font-family: 'Courier Prime', 'Courier New', monospace; font-size: 7px; fill: #005D8C; }
+                        .sch-text-label { font-family: Helvetica, Arial, sans-serif; font-size: 8px; fill: #005D8C; font-weight: 700; }
+                        .sch-arrow { stroke: #005D8C; stroke-width: 1; fill: #005D8C; }
+                    </style>
+
+                    <!-- Grid area -->
+                    <rect x="120" y="40" width="400" height="240" class="sch-line sch-med" />
+
+                    <!-- Grid lines - vertical -->
+                    <line x1="200" y1="40" x2="200" y2="280" class="sch-line sch-thin" />
+                    <line x1="280" y1="40" x2="280" y2="280" class="sch-line sch-thin" />
+                    <line x1="360" y1="40" x2="360" y2="280" class="sch-line sch-thin" />
+                    <line x1="440" y1="40" x2="440" y2="280" class="sch-line sch-thin" />
+
+                    <!-- Grid lines - horizontal -->
+                    <line x1="120" y1="100" x2="520" y2="100" class="sch-line sch-thin" />
+                    <line x1="120" y1="160" x2="520" y2="160" class="sch-line sch-thin" />
+                    <line x1="120" y1="220" x2="520" y2="220" class="sch-line sch-thin" />
+
+                    <!-- Grid cell labels -->
+                    <text x="155" y="78" class="sch-text" text-anchor="middle">APS</text>
+                    <text x="155" y="88" class="sch-text-sm" text-anchor="middle">2001</text>
+
+                    <text x="240" y="78" class="sch-text" text-anchor="middle">NATURE</text>
+                    <text x="240" y="88" class="sch-text-sm" text-anchor="middle">DC 02-07</text>
+
+                    <text x="320" y="78" class="sch-text" text-anchor="middle">NATURE</text>
+                    <text x="320" y="88" class="sch-text-sm" text-anchor="middle">LON 07-13</text>
+
+                    <text x="400" y="78" class="sch-text" text-anchor="middle">NPR</text>
+                    <text x="400" y="88" class="sch-text-sm" text-anchor="middle">CORR 13-16</text>
+
+                    <text x="480" y="78" class="sch-text" text-anchor="middle">NPR</text>
+                    <text x="480" y="88" class="sch-text-sm" text-anchor="middle">SR ED 19-</text>
+
+                    <!-- Subject position markers -->
+                    <circle cx="155" cy="130" r="4" fill="#005D8C" />
+                    <circle cx="240" cy="130" r="4" fill="#005D8C" />
+                    <circle cx="320" cy="190" r="4" fill="#005D8C" />
+                    <circle cx="400" cy="130" r="4" fill="#005D8C" />
+                    <circle cx="480" cy="130" r="4" fill="#005D8C" />
+
+                    <!-- Path line connecting assignments -->
+                    <polyline points="155,130 240,130 320,190 400,130 480,130" class="sch-line sch-med sch-dash" />
+
+                    <!-- Row labels -->
+                    <text x="115" y="134" class="sch-text-label" text-anchor="end">DC</text>
+                    <text x="115" y="194" class="sch-text-label" text-anchor="end">LON</text>
+                    <text x="115" y="254" class="sch-text-label" text-anchor="end">OTHER</text>
+
+                    <!-- Dimension line - top -->
+                    <line x1="120" y1="25" x2="520" y2="25" class="sch-line sch-thin" />
+                    <line x1="120" y1="20" x2="120" y2="30" class="sch-line sch-thin" />
+                    <line x1="520" y1="20" x2="520" y2="30" class="sch-line sch-thin" />
+                    <text x="320" y="22" class="sch-text-label" text-anchor="middle">25 YEARS CONTINUOUS SERVICE</text>
+
+                    <!-- Dimension line - right -->
+                    <line x1="535" y1="40" x2="535" y2="280" class="sch-line sch-thin" />
+                    <line x1="530" y1="40" x2="540" y2="40" class="sch-line sch-thin" />
+                    <line x1="530" y1="280" x2="540" y2="280" class="sch-line sch-thin" />
+
+                    <!-- Marking post indicators -->
+                    <line x1="155" y1="275" x2="155" y2="295" class="sch-line sch-thin" />
+                    <line x1="480" y1="275" x2="480" y2="295" class="sch-line sch-thin" />
+                    <text x="155" y="305" class="sch-text-sm" text-anchor="middle">2001</text>
+                    <text x="480" y="305" class="sch-text-sm" text-anchor="middle">PRESENT</text>
+
+                    <!-- Section/cross-section callout -->
+                    <circle cx="40" cy="160" r="16" class="sch-line sch-med" />
+                    <text x="40" y="157" class="sch-text-label" text-anchor="middle">A</text>
+                    <line x1="40" y1="148" x2="40" y2="172" class="sch-line sch-thin" />
+
+                    <!-- Arrow to grid -->
+                    <line x1="94" y1="44" x2="116" y2="44" class="sch-line sch-thin" />
+                    <polygon points="116,41 122,44 116,47" class="sch-arrow" />
+
+                    <!-- Figure label area -->
+                    <text x="38" y="330" class="sch-text-sm">Fig. 2.2</text>
+                </svg>
+                <p class="figure-caption">Fig. 2.2 &mdash; General arrangement of professional assignments showing<br>the positions and stations of the subject (2001 &ndash; Present).</p>
+            </div>
+
+            <h3 class="sub-heading">2.1 SUMMARY OF EMPLOYMENT</h3>
+
+            <p class="table-caption">Table 2.1 &mdash; Summary of Professional Assignments</p>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Period</th>
+                            <th>Organization</th>
+                            <th>Designation</th>
+                            <th>Station</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Oct 2019 &ndash; Present</td>
+                            <td>NPR</td>
+                            <td>Senior Editor &amp; Correspondent</td>
+                            <td>Washington, D.C.</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 2016 &ndash; Oct 2019</td>
+                            <td>NPR</td>
+                            <td>Dep. Sr. Supervising Editor, Science</td>
+                            <td>Washington, D.C.</td>
+                        </tr>
+                        <tr>
+                            <td>Mar 2013 &ndash; Mar 2016</td>
+                            <td>NPR</td>
+                            <td>Science Correspondent</td>
+                            <td>Washington, D.C.</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 2007 &ndash; Mar 2013</td>
+                            <td>Nature Magazine</td>
+                            <td>Senior Reporter</td>
+                            <td>London, UK</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 2002 &ndash; Aug 2007</td>
+                            <td>Nature Magazine</td>
+                            <td>Washington Correspondent</td>
+                            <td>Washington, D.C.</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 2001 &ndash; Dec 2001</td>
+                            <td>APS / Phys. Rev. Focus</td>
+                            <td>Reporter &amp; Asst. to the Editor</td>
+                            <td>College Park, MD</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="sub-heading">2.2 DETAILED EMPLOYMENT NOTES</h3>
+
+            <div class="body-text has-figure">
+                <p><strong>NPR &mdash; Senior Editor &amp; Correspondent (Oct 2019 &ndash; Present).</strong> Covers nuclear weapons policy, space and national security, and AI-driven disinformation for broadcast and digital platforms. Produces enterprise investigations, breaking news reports, and explanatory features reaching NPR's weekly audience. Develops and edits science coverage across the NPR newsroom.</p>
+
+                <p><strong>NPR &mdash; Deputy Sr. Supervising Editor, Science (Mar 2016 &ndash; Oct 2019).</strong> Directed daily science and health coverage across all NPR platforms, supervising a team of correspondents, editors, and producers. Managed coverage of major science stories including climate, public health, and technology policy.</p>
+
+                <img src="Diagram 1.png" alt="Grid detail schematic" class="section-figure-float section-figure-lg">
+
+                <p><strong>NPR &mdash; Science Correspondent (Mar 2013 &ndash; Mar 2016).</strong> On-air correspondent covering science, technology, and national security for NPR newscasts and programs. Reported from the field on events including space launches, nuclear policy developments, and emerging technology.</p>
+
+                <p><strong>Nature Magazine &mdash; Senior Reporter (Aug 2007 &ndash; Mar 2013).</strong> Covered physical sciences, defense research, and science policy from Nature's London bureau for the world's leading multidisciplinary science journal. Reported on major developments including the Higgs boson discovery, Fukushima nuclear disaster, and European science policy.</p>
+
+                <p><strong>Nature Magazine &mdash; Washington Correspondent (Jan 2002 &ndash; Aug 2007).</strong> Covered U.S. science policy, federal research funding, and physics for Nature from Washington, D.C. Reported on the post-9/11 science security landscape, NASA programs, and Department of Energy research priorities.</p>
+
+                <p><strong>APS / Physical Review Focus &mdash; Reporter &amp; Asst. to the Editor (Aug 2001 &ndash; Dec 2001).</strong> Wrote accessible summaries of physics research published in Physical Review journals for a general scientific audience.</p>
+            </div>
+
+        </div>
     </section>
 
     <!-- CHAPTER 3: TECHNICAL QUALIFICATIONS -->

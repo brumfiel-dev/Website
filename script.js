@@ -297,8 +297,14 @@
                 return;
             }
             var html = '';
+            var count = 0;
             data.feed.forEach(function (item) {
-                html += renderPost(item);
+                if (count >= 3) return;
+                var rendered = renderPost(item);
+                if (rendered) {
+                    html += rendered;
+                    count++;
+                }
             });
             feedContainer.innerHTML = html || '<p>No communications available.</p>';
         })
