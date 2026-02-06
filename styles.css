@@ -117,6 +117,48 @@ a:hover {
     overflow: hidden;
 }
 
+/* Decorative image on cover */
+.cover-deco {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cover-deco-diagram {
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    opacity: 0.14;
+}
+
+/* Plumbob photo in qualifications section */
+.qualifications-page {
+    position: relative;
+}
+
+.qualifications-detail {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.qualifications-detail .body-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.qualifications-figure {
+    flex-shrink: 0;
+    width: 240px;
+    transform: rotate(2deg);
+}
+
+.qualifications-photo {
+    width: 100%;
+    display: block;
+    box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.2);
+}
+
 /* Dark angled banner with reversed text */
 .cover-banner {
     position: absolute;
@@ -139,6 +181,7 @@ a:hover {
     top: 80px;
     right: 48px;
     text-align: right;
+    z-index: 1;
 }
 
 .cover-report-no {
@@ -158,6 +201,8 @@ a:hover {
     padding-left: 8%;
     padding-right: 40%;
     padding-top: 80px;
+    position: relative;
+    z-index: 1;
 }
 
 /* Italic bold label above name (mirrors "OPERATION" in original) */
@@ -177,6 +222,9 @@ a:hover {
     letter-spacing: 0.03em;
     line-height: 0.92;
     margin-bottom: 36px;
+    background: var(--white);
+    padding: 8px 12px;
+    display: inline-block;
 }
 
 .cover-location {
@@ -235,6 +283,7 @@ a:hover {
     top: 22%;
     text-align: center;
     width: 280px;
+    z-index: 1;
 }
 
 .cover-photo-area .figure-photo-wrapper {
@@ -247,6 +296,9 @@ a:hover {
     margin-top: 10px;
     line-height: 1.4;
     color: var(--black);
+    background: var(--white);
+    padding: 6px 8px;
+    display: inline-block;
 }
 
 .cover-dist {
@@ -254,6 +306,9 @@ a:hover {
     bottom: 48px;
     right: 48px;
     text-align: center;
+    z-index: 1;
+    background: var(--white);
+    padding: 8px 12px;
 }
 
 .cover-dist p {
@@ -722,6 +777,19 @@ td a {
     .nav-links li a {
         padding: 12px 24px;
         border-bottom: 1px solid #222;
+    }
+
+    .cover-deco-diagram {
+        display: none;
+    }
+
+    .qualifications-detail {
+        flex-direction: column;
+    }
+
+    .qualifications-figure {
+        width: 200px;
+        margin: 24px auto;
     }
 
     .cover-page {
