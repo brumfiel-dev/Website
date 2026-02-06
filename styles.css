@@ -159,6 +159,34 @@ a:hover {
     box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Abstract layout - side by side, no wrap */
+.abstract-layout {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.abstract-layout .body-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.abstract-layout .section-figure-float {
+    float: none;
+    flex-shrink: 0;
+}
+
+/* Floated figures alongside text */
+.section-figure-float {
+    float: right;
+    width: 220px;
+    margin: 0 0 16px 24px;
+}
+
+.section-figure-float.section-figure-lg {
+    width: 380px;
+}
+
 /* Dark angled banner with reversed text */
 .cover-banner {
     position: absolute;
@@ -216,10 +244,10 @@ a:hover {
 }
 
 .cover-name {
-    font-family: var(--font-cover-serif);
+    font-family: 'Bree Serif', serif;
     font-size: clamp(52px, 9vw, 78px);
     font-weight: 700;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
     line-height: 0.92;
     margin-bottom: 36px;
     background: var(--white);
@@ -560,9 +588,6 @@ td a {
     white-space: nowrap;
 }
 
-.dispatch-table td:nth-child(2) {
-    white-space: nowrap;
-}
 
 /* --- ARCHIVE NOTE --- */
 .archive-note {
@@ -781,6 +806,26 @@ td a {
 
     .cover-deco-diagram {
         display: none;
+    }
+
+    .has-figure {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .abstract-layout {
+        flex-direction: column;
+    }
+
+    .section-figure-float {
+        float: none;
+        order: 99;
+        width: 180px;
+        margin: 24px auto 0;
+    }
+
+    .section-figure-float.section-figure-lg {
+        width: 100%;
     }
 
     .qualifications-detail {

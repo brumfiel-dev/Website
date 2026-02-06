@@ -6,8 +6,8 @@
     <title>GB-2026-001 — GEOFF BRUMFIEL</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
                 <li><a href="#service-record">Employment</a></li>
                 <li><a href="#Stories">Stories</a></li>
                 <li><a href="#qualifications">Qualifications</a></li>
-                <li><a href="#distribution">Distribution</a></li>
+                <li><a href="#distribution">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -100,17 +100,7 @@
                     <a href="#Stories">Chapter 2&ensp;RECENT Stories</a>
                 </div>
                 <div class="contents-entry sub">
-                    <span>2.1&emsp;Nuclear Policy</span>
-                    <span class="contents-dots"></span>
-                    <a href="#Stories">3</a>
-                </div>
-                <div class="contents-entry sub">
-                    <span>2.2&emsp;AI &amp; Disinformation</span>
-                    <span class="contents-dots"></span>
-                    <a href="#Stories">3</a>
-                </div>
-                <div class="contents-entry sub">
-                    <span>2.3&emsp;National Security &amp; Space</span>
+                    <span>2.1&emsp;Table of Recent Stories</span>
                     <span class="contents-dots"></span>
                     <a href="#Stories">3</a>
                 </div>
@@ -125,7 +115,7 @@
                 </div>
 
                 <div class="contents-chapter">
-                    <a href="#distribution">Chapter 4&ensp;DISTRIBUTION LIST</a>
+                    <a href="#distribution">Chapter 4&ensp;GET IN TOUCH</a>
                 </div>
             </div>
 
@@ -154,9 +144,12 @@
     <section id="abstract" class="page">
         <div class="page-inner">
             <h2 class="section-heading">ABSTRACT</h2>
-            <div class="body-text indented">
-                <p>Geoff Brumfiel is a veteran science and technology journalist with 25 years of experience in the field. He's reported extensively on space exploration, nuclear weapons, national security, artificial intelligence and more.</p>
-                <p>Geoff holds a double-degree in physics and English. He spent over a decade reporting on fundamental physics and science policy for Nature magazine (reporting from both the London and Washington bureaus). He joined NPR in 2013 and has travelled to Fukushima, where he reported on the aftermath of the 2011 nuclear disaster, and deep inside the tunnels where America tests its nuclear weapons.</p>
+            <div class="abstract-layout has-figure">
+                <div class="body-text indented">
+                    <p>Geoff Brumfiel is a veteran science and technology journalist with 25 years of experience in the field. He's reported extensively on space exploration, nuclear weapons, national security, artificial intelligence and more.</p>
+                    <p>Geoff holds a double-degree in physics and English. He spent over a decade reporting on fundamental physics and science policy for Nature magazine (reporting from both the London and Washington bureaus). He joined NPR in 2013 and has travelled to Fukushima, where he reported on the aftermath of the 2011 nuclear disaster, and deep inside the tunnels where America tests its nuclear weapons.</p>
+                </div>
+                <img src="Diagram 2.png" alt="Nevada Test Site map, 1957" class="section-figure-float">
             </div>
         </div>
     </section>
@@ -318,10 +311,12 @@
 
             <h3 class="sub-heading">1.2 DETAILED EMPLOYMENT NOTES</h3>
 
-            <div class="body-text">
+            <div class="body-text has-figure">
                 <p><strong>NPR &mdash; Senior Editor &amp; Correspondent (Oct 2019 &ndash; Present).</strong> Covers nuclear weapons policy, space and national security, and AI-driven disinformation for broadcast and digital platforms. Produces enterprise investigations, breaking news reports, and explanatory features reaching NPR's weekly audience. Develops and edits science coverage across the NPR newsroom.</p>
 
                 <p><strong>NPR &mdash; Deputy Sr. Supervising Editor, Science (Mar 2016 &ndash; Oct 2019).</strong> Directed daily science and health coverage across all NPR platforms, supervising a team of correspondents, editors, and producers. Managed coverage of major science stories including climate, public health, and technology policy.</p>
+
+                <img src="Diagram 1.png" alt="Grid detail schematic" class="section-figure-float section-figure-lg">
 
                 <p><strong>NPR &mdash; Science Correspondent (Mar 2013 &ndash; Mar 2016).</strong> On-air correspondent covering science, technology, and national security for NPR newscasts and programs. Reported from the field on events including space launches, nuclear policy developments, and emerging technology.</p>
 
@@ -342,8 +337,7 @@
             <p class="chapter-label">Chapter 2</p>
             <h2 class="chapter-heading">RECENT STORIES</h2>
 
-            <!-- Fig. 1.3: Horizontal bar chart of recent Stories by category -->
-            <div class="figure">
+            <div id="stories-chart" class="figure">
                 <svg class="schematic-svg" viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg">
                     <style>
                         .ch-line { stroke: #005D8C; fill: none; }
@@ -355,12 +349,8 @@
                         .ch-title { font-family: 'Courier Prime', 'Courier New', monospace; font-size: 8px; fill: #005D8C; font-weight: 700; }
                         .ch-bar { fill: #005D8C; }
                     </style>
-
-                    <!-- Axes -->
                     <line x1="140" y1="30" x2="140" y2="175" class="ch-line ch-med"/>
                     <line x1="140" y1="175" x2="520" y2="175" class="ch-line ch-med"/>
-
-                    <!-- X-axis tick marks and labels -->
                     <line x1="203" y1="175" x2="203" y2="180" class="ch-line ch-thin"/>
                     <text x="203" y="193" class="ch-label" text-anchor="middle">1</text>
                     <line x1="266" y1="175" x2="266" y2="180" class="ch-line ch-thin"/>
@@ -373,124 +363,96 @@
                     <text x="455" y="193" class="ch-label" text-anchor="middle">5</text>
                     <line x1="518" y1="175" x2="518" y2="180" class="ch-line ch-thin"/>
                     <text x="518" y="193" class="ch-label" text-anchor="middle">6</text>
-
-                    <!-- X-axis title -->
-                    <text x="329" y="212" class="ch-title" text-anchor="middle">NO. OF Stories (OCT 2025 &ndash; FEB 2026)</text>
-
-                    <!-- Vertical grid lines -->
+                    <text x="329" y="212" class="ch-title" text-anchor="middle">NO. OF STORIES</text>
                     <line x1="203" y1="30" x2="203" y2="175" class="ch-grid"/>
                     <line x1="266" y1="30" x2="266" y2="175" class="ch-grid"/>
                     <line x1="329" y1="30" x2="329" y2="175" class="ch-grid"/>
                     <line x1="392" y1="30" x2="392" y2="175" class="ch-grid"/>
                     <line x1="455" y1="30" x2="455" y2="175" class="ch-grid"/>
                     <line x1="518" y1="30" x2="518" y2="175" class="ch-grid"/>
-
-                    <!-- Bars -->
                     <text x="135" y="50" class="ch-text" text-anchor="end">NUCLEAR</text>
                     <rect x="140" y="38" width="378" height="22" class="ch-bar"/>
                     <text x="524" y="53" class="ch-label">6</text>
-
                     <text x="135" y="79" class="ch-text" text-anchor="end">AI/DISINFO</text>
                     <rect x="140" y="67" width="252" height="22" class="ch-bar"/>
                     <text x="398" y="82" class="ch-label">4</text>
-
                     <text x="135" y="108" class="ch-text" text-anchor="end">TECHNOLOGY</text>
                     <rect x="140" y="96" width="63" height="22" class="ch-bar"/>
                     <text x="209" y="111" class="ch-label">1</text>
-
                     <text x="135" y="137" class="ch-text" text-anchor="end">SECURITY</text>
                     <rect x="140" y="125" width="63" height="22" class="ch-bar"/>
                     <text x="209" y="140" class="ch-label">1</text>
-
                     <text x="135" y="166" class="ch-text" text-anchor="end">SPACE</text>
                     <rect x="140" y="154" width="63" height="22" class="ch-bar"/>
                     <text x="209" y="169" class="ch-label">1</text>
-
-                    <!-- Dimension annotation -->
                     <line x1="140" y1="33" x2="518" y2="33" class="ch-line ch-thin"/>
                     <line x1="140" y1="30" x2="140" y2="36" class="ch-line ch-thin"/>
                     <line x1="518" y1="30" x2="518" y2="36" class="ch-line ch-thin"/>
                     <text x="329" y="28" class="ch-title" text-anchor="middle">N = 13</text>
-
-                    <text x="5" y="212" class="ch-label">Fig. 1.3</text>
                 </svg>
-                <p class="figure-caption">Fig. 2.1 &mdash; Distribution of recent Stories by subject category<br>(Oct 2025 &ndash; Feb 2026, N = 13).</p>
+                <p class="figure-caption">Fig. 2.1 &mdash; Distribution of recent stories by subject category.</p>
             </div>
-            
+
             <p class="table-caption">Table 2.1 &mdash; Table of Recent Stories</p>
             <div class="table-wrapper">
                 <table class="dispatch-table">
                     <thead>
                         <tr>
                             <th>Date</th>
-                            <th>Subject</th>
                             <th>Headline</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="stories-body">
                         <tr>
                             <td>4 Feb 2026</td>
-                            <td>Nuclear</td>
                             <td><a href="https://www.npr.org/2026/02/04/nx-s1-5697382/new-start-nuclear-treaty-expired-us-russia" target="_blank" rel="noopener">For the first time in decades, the U.S. and Russia have no limits on nuclear weapons</a></td>
                         </tr>
                         <tr>
                             <td>2 Feb 2026</td>
-                            <td>Nuclear</td>
                             <td><a href="https://www.npr.org/2026/02/02/nx-s1-5696525/trump-nuclear-safety-regulations-environmental-review" target="_blank" rel="noopener">The Trump administration exempts new nuclear reactors from environmental review</a></td>
                         </tr>
                         <tr>
                             <td>28 Jan 2026</td>
-                            <td>Nuclear</td>
                             <td><a href="https://www.npr.org/2026/01/28/nx-s1-5690168/the-white-house-has-quietly-rewritten-nuclear-regulations-raising-concerns" target="_blank" rel="noopener">The White House has quietly rewritten nuclear regulations, raising concerns</a></td>
                         </tr>
                         <tr>
                             <td>28 Jan 2026</td>
-                            <td>Nuclear</td>
                             <td><a href="https://www.npr.org/2026/01/28/nx-s1-5677187/nuclear-safety-rules-rewritten-trump" target="_blank" rel="noopener">The Trump administration has secretly rewritten nuclear safety rules</a></td>
                         </tr>
                         <tr>
                             <td>10 Jan 2026</td>
-                            <td>AI/Disinfo</td>
                             <td><a href="https://www.npr.org/2026/01/10/nx-s1-5669478/how-ai-generated-content-increased-disinformation-after-maduros-removal" target="_blank" rel="noopener">How AI-generated content increased disinformation after Maduro's removal</a></td>
                         </tr>
                         <tr>
                             <td>8 Jan 2026</td>
-                            <td>AI/Disinfo</td>
                             <td><a href="https://www.npr.org/2026/01/08/nx-s1-5671740/ice-minneapolis-grok-ai-renee-nicole-good" target="_blank" rel="noopener">AI images and internet rumors spread confusion about ICE agent involved in shooting</a></td>
                         </tr>
                         <tr>
                             <td>24 Dec 2025</td>
-                            <td>AI/Disinfo</td>
                             <td><a href="https://www.npr.org/2025/12/24/nx-s1-5629169/2025-has-seen-an-explosion-of-ai-generated-slop" target="_blank" rel="noopener">2025 has seen an explosion of AI-generated slop</a></td>
                         </tr>
                         <tr>
                             <td>17 Dec 2025</td>
-                            <td>Nuclear</td>
                             <td><a href="https://www.npr.org/2025/12/17/nx-s1-5608371/trump-executive-order-new-nuclear-reactors-safety-concerns" target="_blank" rel="noopener">Trump's rush to build nuclear reactors across the U.S. raises safety worries</a></td>
                         </tr>
                         <tr>
                             <td>30 Nov 2025</td>
-                            <td>AI/Disinfo</td>
                             <td><a href="https://www.npr.org/2025/11/30/nx-s1-5610951/fake-ai-videos-slop-quiz" target="_blank" rel="noopener">AI video slop is everywhere &mdash; take our quiz to try and spot it</a></td>
                         </tr>
                         <tr>
                             <td>25 Nov 2025</td>
-                            <td>Technology</td>
                             <td><a href="https://www.npr.org/2025/11/25/nx-s1-5619239/x-maga-influencers-location" target="_blank" rel="noopener">X's new location feature sparks controversy, but is the data reliable?</a></td>
                         </tr>
                         <tr>
                             <td>7 Nov 2025</td>
-                            <td>Security</td>
                             <td><a href="https://www.npr.org/2025/11/07/nx-s1-5558286/israel-republicans-antisemitism-carlson" target="_blank" rel="noopener">Conservative support for Israel is declining amid rising antisemitism</a></td>
                         </tr>
                         <tr>
                             <td>31 Oct 2025</td>
-                            <td>Nuclear</td>
                             <td><a href="https://www.npr.org/2025/10/31/nx-s1-5591336/trump-says-he-wants-to-resume-nuclear-testing-heres-what-that-would-mean" target="_blank" rel="noopener">Trump says he wants to resume nuclear testing. Here's what that would mean.</a></td>
                         </tr>
                         <tr>
                             <td>17 Oct 2025</td>
-                            <td>Space</td>
                             <td><a href="https://www.npr.org/2025/10/17/nx-s1-5575254/spacex-starshield-starlink-signal" target="_blank" rel="noopener">Classified SpaceX satellite network emits mysterious signal</a></td>
                         </tr>
                     </tbody>
@@ -504,7 +466,7 @@
 
             <aside id="bluesky" class="bsky-sidebar">
                 <div class="bsky-sidebar-header">
-                    <span class="bsky-sidebar-label">FIELD COMMUNICATIONS</span>
+                    <span class="bsky-sidebar-label">LATEST POSTS</span>
                     <span class="bsky-sidebar-rule"></span>
                     <a href="https://bsky.app/profile/gbrumfiel.bsky.social" target="_blank" rel="noopener" class="bsky-sidebar-handle">@gbrumfiel.bsky.social</a>
                 </div>
@@ -566,16 +528,17 @@
         </div>
     </section>
 
-    <!-- CHAPTER 4: DISTRIBUTION LIST -->
+    <!-- CHAPTER 4: GET IN TOUCH -->
     <section id="distribution" class="page">
         <div class="page-inner">
             <p class="chapter-label">Chapter 4</p>
-            <h2 class="chapter-heading">DISTRIBUTION LIST</h2>
+            <h2 class="chapter-heading">GET IN TOUCH</h2>
 
             <div class="body-text indented">
                 <p>For correspondence and further inquiries, the subject may be reached through the following channels. Installation and operation of these channels are the responsibility of the respective organizations.</p>
             </div>
 
+            <p class="table-caption">Table 4.1 &mdash; Social Media</p>
             <div class="table-wrapper">
                 <table>
                     <thead>
@@ -592,8 +555,23 @@
                             <td>Active</td>
                         </tr>
                         <tr>
-                            <td>NPR Author Page</td>
-                            <td><a href="https://www.npr.org/people/279612138/geoff-brumfiel" target="_blank" rel="noopener">npr.org/people/279612138/geoff-brumfiel</a></td>
+                            <td>Bluesky</td>
+                            <td><a href="https://bsky.app/profile/gbrumfiel.bsky.social" target="_blank" rel="noopener">@gbrumfiel.bsky.social</a></td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Facebook</td>
+                            <td><a href="https://www.facebook.com/gbrumfielNPR" target="_blank" rel="noopener">facebook.com/gbrumfielNPR</a></td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Instagram</td>
+                            <td><a href="https://www.instagram.com/geoff.brumfiel/" target="_blank" rel="noopener">@geoff.brumfiel</a></td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>X</td>
+                            <td><a href="https://x.com/gbrumfiel" target="_blank" rel="noopener">@gbrumfiel</a></td>
                             <td>Active</td>
                         </tr>
                         <tr>
