@@ -75,7 +75,7 @@
     var storiesChart = document.getElementById('stories-chart');
     var RSS_URL = 'https://feeds.npr.org/279612138/rss.xml';
     var PROXY_URLS = [
-        'https://api.codetabs.com/v1/proxy/?quest=' + encodeURIComponent(RSS_URL),
+        'https://api.codetabs.com/v1/proxy/?quest=' + RSS_URL,
         'https://api.allorigins.win/raw?url=' + encodeURIComponent(RSS_URL)
     ];
 
