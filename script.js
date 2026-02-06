@@ -207,8 +207,8 @@
 
         if (rows.length === 0) return;
 
-        // Limit to 15 most recent
-        rows = rows.slice(0, 15);
+        // Limit to 10 most recent
+        rows = rows.slice(0, 10);
 
         // Update table
         var html = '';
