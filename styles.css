@@ -658,6 +658,31 @@ td a {
     text-align: center;
 }
 
+/* --- RESPONSIVE (medium screens) --- */
+@media (max-width: 1100px) {
+    /* Move dist block to bottom-left so it doesn't cover the photo */
+    .cover-dist {
+        right: auto;
+        left: 48px;
+        text-align: left;
+    }
+
+    /* Shrink and push photo down so it clears the GB-2026-001 text */
+    .cover-photo-area {
+        top: 35%;
+        width: 220px;
+        right: 24px;
+    }
+
+    .cover-photo-area .figure-photo-wrapper {
+        max-width: 220px;
+    }
+
+    .cover-upper-right {
+        right: 24px;
+    }
+}
+
 /* --- RESPONSIVE (tablet / phone) --- */
 @media (max-width: 768px) {
     /* Show hamburger menu button */
